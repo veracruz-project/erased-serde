@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::fmt::{self, Display};
 
 /// Error when a `Serializer` or `Deserializer` trait object fails.

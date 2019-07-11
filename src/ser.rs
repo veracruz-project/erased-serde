@@ -1,11 +1,13 @@
 use crate::any::Any;
 use crate::error::Error;
+use serde;
 use serde::ser::{
     SerializeMap, SerializeSeq, SerializeStruct, SerializeStructVariant, SerializeTuple,
     SerializeTupleStruct, SerializeTupleVariant,
 };
 use serde::serde_if_integer128;
 use std::fmt::Display;
+use std::prelude::v1::*;
 use std::marker::PhantomData;
 
 // TRAITS //////////////////////////////////////////////////////////////////////

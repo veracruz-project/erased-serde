@@ -1,6 +1,7 @@
 use crate::any::Any;
 use crate::error::Error;
 use serde::serde_if_integer128;
+use std::prelude::v1::*;
 use std::fmt::{self, Display};
 
 /// Deserialize a value of type `T` from the given trait object.
