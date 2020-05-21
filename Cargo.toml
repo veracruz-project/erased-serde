@@ -13,7 +13,7 @@ edition = "2018"
 exclude = ["/sgx/*"]
 
 [dependencies]
-serde = { git = "https://github.com/mesalock-linux/serde-sgx" }
+serde = { git = "https://github.com/veracruz-project/serde.git",  branch="veracruz" }
 sgx_tstd = { rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git", optional = true }
 
 [dev-dependencies]
@@ -23,8 +23,8 @@ sgx_tstd = { rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.g
 
 [features]
 unstable-debug = []
-default = ["mesalock_sgx"]
-mesalock_sgx = ["sgx_tstd"]
+default = ["serde/default"]
+mesalock_sgx = ["sgx_tstd","serde/mesalock_sgx"]
 
 [[test]]
 name = "test"
